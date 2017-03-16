@@ -74,7 +74,7 @@ function X2()
     for i = 2:x-1
         for j=2:y-1
         //On fait la moyenne des différents pixels qui se trouvent autour de celui que l'on regarde
-        mean = (img(j-1, i-1)+img(j+1, i+1)+img(j+1, i-1)+img(j-1, i+1)+img(j, i+1)+img(j, i-1)+img(j-1, i)+img(j+1, i))/8
+        mean = (img(j-1, i-1)+img(j+1, i+1)+img(j+1, i-1)+img(j-1, i+1)+img(j, i+1)+img(j, i-1)+img(j-1, i)+img(j+1, i)+img(j, i))/9
         img(j, i) = mean //On applique cette moyenne au pixel actuel
         end
     end
@@ -86,7 +86,7 @@ function X2_V2()
     [y,x] = size(img)
     for i = 2:x-1
         for j=2:y-1
-        mean = (img(j-1, i-1)+img(j+1, i+1)+img(j+1, i-1)+img(j-1, i+1)+img(j, i+1)+img(j, i-1)+img(j-1, i)+img(j+1, i))/8
+        mean = (img(j-1, i-1)+img(j+1, i+1)+img(j+1, i-1)+img(j-1, i+1)+img(j, i+1)+img(j, i-1)+img(j-1, i)+img(j+1, i)+img(j, i))/9
         img(j, i) = mean
         end
     end
